@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5171875" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/correct_option_border_bg.xml" value="0.5171875" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/default_option_border_bg.xml" value="0.2916666666666667" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/ic_flag_of_argentina.xml" value="0.5171875" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.303125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/incorrect_option_border_bg.xml" value="0.5171875" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/selected_option_border_bg.xml" value="0.5171875" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/jason/AndroidStudioProjects/QuizApp/app/src/main/res/layout/activity_quiz_questions.xml" value="0.23731793068809642" />
