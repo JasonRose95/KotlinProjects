@@ -12,6 +12,7 @@ import com.example.mymaps.models.CreateMapActivity
 import com.example.mymaps.models.MapsAdapter
 import com.example.mymaps.models.Place
 import com.example.mymaps.models.UserMap
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 const val EXTRA_USER_MAP = "EXTRA_USER_MAP"
 private const val TAG = "MainActivity"
@@ -40,11 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        val fabCreateMap = findViewById<Button>(R.id.fabCreateMap)
+        val fabCreateMap = findViewById<FloatingActionButton>(R.id.fabCreateMap)
         fabCreateMap.setOnClickListener {
             Log.i(TAG, "Tap on FAB")
             val intent = Intent(this@MainActivity, CreateMapActivity::class.java)
-            intent.putExtra(EXTRA_MAP_TITLE, userMaps[position])
+            intent.putExtra(EXTRA_MAP_TITLE, "new map name")
             startActivityForResult(intent, REQUEST_CODE)
         }
     }
