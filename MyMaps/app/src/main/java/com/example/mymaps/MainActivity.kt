@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mymaps.models.MapsAdapter
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        val fabCreateMap = findViewById<Button>(R.id.fabCreateMap)
+        fabCreateMap.setOnClickListener {
+            Log.i(TAG, "Tap on FAB")
+            val intent = Intent(this@MainActivity)
+        }
     }
     private fun generateSampleData(): List<UserMap> {
         return listOf(
