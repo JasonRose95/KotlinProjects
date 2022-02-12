@@ -1,4 +1,4 @@
-package com.example.sevenminuteworkout
+package com.example.fiveminuteworkout
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

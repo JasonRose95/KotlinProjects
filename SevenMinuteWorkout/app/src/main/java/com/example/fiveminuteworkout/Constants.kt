@@ -1,4 +1,4 @@
-package com.example.sevenminuteworkout
+package com.example.fiveminuteworkout
 
 object Constants {
 
@@ -29,7 +29,7 @@ object Constants {
             false,
             false
         )
-        exerciseList.add(reverseCorkscrews)
+        exerciseList.add(plankReachouts)
 
         val chainsaws = ExerciseModel(
             4,

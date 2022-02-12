@@ -1,4 +1,4 @@
-package com.example.sevenminuteworkout
+package com.example.fiveminuteworkout
 
 class ExerciseModel (
     private var id: Int,

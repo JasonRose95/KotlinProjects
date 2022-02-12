@@ -1,11 +1,9 @@
-package com.example.sevenminuteworkout
+package com.example.fiveminuteworkout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import android.widget.Toast
-import com.example.sevenminuteworkout.databinding.ActivityMainBinding
+import com.example.fiveminuteworkout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var binding:ActivityMainBinding?= null
