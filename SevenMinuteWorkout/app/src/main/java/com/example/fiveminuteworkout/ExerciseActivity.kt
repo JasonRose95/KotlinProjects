@@ -1,5 +1,7 @@
 package com.example.fiveminuteworkout
 
+import android.media.MediaPlayer
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -8,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.fiveminuteworkout.databinding.ActivityExerciseBinding
+import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -24,6 +27,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var currentExercisePosition = -1
 
     private var tts:TextToSpeech? = null
+    private var player:MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,15 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
     private fun setupRestView(){
+
+        try{
+            player = MediaPlayer.create(applicationContext, R.raw.press_start)
+            player?.isLooping = false
+            player?.start()
+
+        }catch (e: Exception){
+            e.printStackTrace()
+        }
         binding?.flRestView?.visibility = View.VISIBLE
         binding?.tvTitle?.visibility= View.VISIBLE
         binding?.tvExerciseName?.visibility = View.INVISIBLE
@@ -61,8 +74,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             restTimer?.cancel()
             restProgress = 0
         }
-
-        speakOut("Rest for 10 seconds!")
 
         binding?.tvUpcomingExerciseName?.text =
             exerciseList!![currentExercisePosition + 1].getName()
@@ -148,6 +159,10 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         if(tts != null){
             tts!!.stop()
             tts!!.shutdown()
+        }
+
+        if(player != null){
+            player!!.stop()
         }
 
         binding = null
