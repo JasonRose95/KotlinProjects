@@ -62,6 +62,8 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             restProgress = 0
         }
 
+        speakOut("Rest for 10 seconds!")
+
         binding?.tvUpcomingExerciseName?.text =
             exerciseList!![currentExercisePosition + 1].getName()
         setRestProgressBar()
