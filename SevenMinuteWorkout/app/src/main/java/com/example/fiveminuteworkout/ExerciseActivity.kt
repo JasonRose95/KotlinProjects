@@ -46,14 +46,13 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
+        binding?.toolbarExercise?.setNavigationOnClickListener {
+            customDialogForBackButton()
+        }
 
         exerciseList = Constants.defaultExerciseList()
 
         tts = TextToSpeech(this, this)
-
-        binding?.toolbarExercise?.setNavigationOnClickListener {
-            customDialogForBackButton()
-        }
 
         setupRestView()
         setupExerciseStatusRecyclerView()
